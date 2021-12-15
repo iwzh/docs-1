@@ -64,6 +64,7 @@ $grid->export()->titles($titles);
 ### 处理导出数据
 
 ```php
+//2.1.6-beta 起，$rows 数据类型从 array 变为 Illuminate\Support\Collection 对象了
 $grid->export()->rows(function (array $rows) {
     foreach ($rows as $index => &$row) {
         $row['name'] = $row['first_name'].' '.$row['last_name'];
